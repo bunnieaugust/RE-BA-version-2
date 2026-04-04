@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --brand-green: #1A3622;
+  --brand-green-light: #2C4C3B;
+  --brand-yellow: #D9B754;
+  --brand-yellow-light: #E8C373;
+  --brand-beige: #E6D5C3;
+  --brand-sand: #F5F2EB;
+  --brand-charcoal: #2A2A2A;
+  --brand-olive: #3B3C36;
+  --brand-ivory: #FDFBF7;
+
+  --bg-color: var(--brand-ivory);
+  --text-color: var(--brand-charcoal);
+  --border-color: rgba(42, 42, 42, 0.1);
+  --card-bg: hsl(0 0% 100% / 0.8);
+}
+
+.dark {
+  --brand-green: #3a634d;
+  --brand-green-light: #4a7a5f;
+  --brand-yellow: #E8C373;
+  --brand-yellow-light: #F2D492;
+  --brand-beige: #1A1A1A;
+  --brand-sand: #141414;
+  --brand-charcoal: #FDFBF7;
+  --brand-olive: #242424;
+  --brand-ivory: #0A0A0A;
+
+  --bg-color: #0A0A0A;
+  --text-color: #F3F4F6;
+  --border-color: rgba(255, 255, 255, 0.15);
+  --card-bg: hsl(0 0% 10% / 0.8);
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-brand-green: var(--brand-green);
+  --color-brand-green-light: var(--brand-green-light);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-yellow-light: var(--brand-yellow-light);
+  --color-brand-beige: var(--brand-beige);
+  --color-brand-sand: var(--brand-sand);
+  --color-brand-charcoal: var(--brand-charcoal);
+  --color-brand-olive: var(--brand-olive);
+  --color-brand-ivory: var(--brand-ivory);
+
+  --color-background: var(--bg-color);
+  --color-foreground: var(--text-color);
+  --color-border-subtle: var(--border-color);
+
+  --animate-aurora: aurora 60s linear infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
+  }
+
+  @keyframes shimmer {
+    from {
+      backgroundPosition: 0 0;
+    }
+    to {
+      backgroundPosition: -200% 0;
+    }
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - 0.5rem));
+    }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .section-container {
+    @apply max-w-[1200px] mx-auto px-6 md:px-12;
+  }
+  
+  .reading-width {
+    @apply max-w-[760px] mx-auto;
+  }
+  
+  .section-spacing {
+    @apply py-12 md:py-20 lg:py-32;
+  }
+
+  .liquid-glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+  }
+  
+  .liquid-glass-strong {
+    @apply bg-white/20 backdrop-blur-lg border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.15)];
+  }
+
+  @keyframes fade-slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-slide-in-1 {
+    animation: fade-slide-in 0.8s ease-out forwards;
+  }
+
+  .animate-fade-slide-in-2 {
+    animation: fade-slide-in 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-slide-in-3 {
+    animation: fade-slide-in 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-slide-in-4 {
+    animation: fade-slide-in 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+  }
+}
