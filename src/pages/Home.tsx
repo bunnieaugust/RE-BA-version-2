@@ -218,26 +218,30 @@ export function Home() {
       </div>
       
       {/* SECTION 2: VỀ RE:BA */}
-      <section className="relative w-full bg-brand-ivory text-brand-charcoal">
-        {/* --- CỤM 1: BỐ CỤC 2 CỘT (TRÁI GHIM - PHẢI CUỘN) --- */}
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row relative">
+      <section className="relative w-full bg-background text-foreground pt-12 md:pt-20">
+        
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row relative gap-8 lg:gap-16">
           
-          {/* CỘT TRÁI - Dùng Sticky để ghim giữa màn hình */}
-          <div className="w-full md:w-5/12 md:sticky md:top-0 h-auto md:h-screen flex flex-col justify-center items-start pt-10 md:pt-0 z-10">
+          {/* CỘT TRÁI - Rộng 40% */}
+          <div className="w-full md:w-5/12 md:sticky md:top-0 h-auto md:h-screen flex flex-col justify-center items-start pt-16 md:pt-0 z-10">
             
-            {/* Hiệu ứng 3D BendText cho chữ VỀ RE:BA */}
-            <div className="w-full h-[150px] sm:h-[200px] relative -ml-4">
+            {/* Tăng không gian chứa chữ 3D để BendText to hơn */}
+            <div className="w-full h-[150px] sm:h-[180px] md:h-[220px] relative -ml-4 md:-ml-6">
               <BendText /> 
             </div>
             
-            {/* Phụ đề tĩnh */}
-            <h3 className="text-2xl md:text-3xl font-medium text-brand-charcoal/80 mt-4 leading-snug max-w-sm">
-              Từ phụ phẩm nông nghiệp đến vật liệu bền vững
-            </h3>
+            {/* Phụ đề tĩnh - Đẩy sát lại với tiêu đề 3D */}
+            <div className="mt-0 md:-mt-4 pl-4 md:pl-6">
+              <h3 className="text-xl md:text-2xl font-medium text-foreground/80 leading-snug max-w-sm">
+                Từ phụ phẩm nông nghiệp đến vật liệu bền vững
+              </h3>
+              {/* Thêm một đường gạch ngang nhỏ tạo điểm nhấn thanh lịch */}
+              <div className="h-1 w-12 bg-green-700/60 mt-6 rounded-full"></div>
+            </div>
 
           </div>
 
-          {/* CỘT PHẢI - Cuộn để TextReveal chạy */}
+          {/* CỘT PHẢI - Rộng 60% */}
           <div className="w-full md:w-7/12 flex items-center relative z-20">
             <TextRevealByWord 
               text="RE:BA là doanh nghiệp phát triển vật liệu sinh học từ sợi thân chuối – một nguồn phụ phẩm nông nghiệp dồi dào nhưng chưa được khai thác hiệu quả tại Việt Nam." 
@@ -246,8 +250,8 @@ export function Home() {
 
         </div>
 
-        {/* --- CỤM 2: STICKY SCROLL NẰM Ở DƯỚI --- */}
-        <div className="relative w-full z-20 bg-brand-ivory">
+        {/* Khối Sticky Scroll chi tiết nằm ở dưới (giữ nguyên component của dự án) */}
+        <div className="relative w-full z-20 bg-background">
            <AboutStickyCards />
         </div>
       </section>

@@ -9,11 +9,16 @@ interface TextRevealByWordProps {
 }
 
 const TextRevealByWord: FC<TextRevealByWordProps> = ({ text, className }) => {
+    // [FIX 1]: Chỉ dùng 1 ref duy nhất cho thẻ div bọc ngoài cùng
     const targetRef = useRef<HTMLDivElement | null>(null);
     
+    // [FIX 2 TĂNG TỐC]: Thu hẹp khoảng cách offset để rút ngắn quãng đường cuộn.
+    // "start 80%": Bắt đầu hiệu ứng ngay khi khung text vừa lú lên 20% từ dưới màn hình.
+    // "start 25%": Chữ SÁNG XONG HOÀN TOÀN cực nhanh khi khung text cuộn đến mốc 25% phía trên.
+    // -> Quãng đường hoàn thành giờ rất ngắn (chỉ tốn khoảng nửa vòng lăn chuột).
     const { scrollYProgress } = useScroll({
         target: targetRef,
-        offset: ["start 75%", "end 50%"]
+        offset: ["start 80%", "start 25%"]
     });
 
     const words = text.split(" ");
@@ -21,7 +26,9 @@ const TextRevealByWord: FC<TextRevealByWordProps> = ({ text, className }) => {
     return (
         <div ref={targetRef} className={cn("relative z-0 h-[100vh] w-full", className)}>
             <div className={"sticky top-0 mx-auto flex h-full w-full items-center bg-transparent"}>
-                <p ref={targetRef} className={"flex flex-wrap text-2xl font-medium leading-relaxed tracking-wide text-foreground/20 md:text-3xl lg:text-4xl"}>
+                
+                {/* ĐÃ XÓA bỏ thuộc tính ref={targetRef} bị dư thừa ở thẻ <p> này */}
+                <p className={"flex flex-wrap text-lg md:text-xl font-medium leading-loose tracking-wide text-foreground/30"}>
                     {words.map((word, i) => {
                         const start = i / words.length;
                         const end = start + 1 / words.length;
@@ -32,6 +39,7 @@ const TextRevealByWord: FC<TextRevealByWordProps> = ({ text, className }) => {
                         );
                     })}
                 </p>
+                
             </div>
         </div>
     );

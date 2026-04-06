@@ -161,12 +161,12 @@ export const vi = {
         {
           quote: "Chất liệu sợi chuối của RE:BA thực sự độc đáo. Nó mang lại cảm giác sang trọng nhưng vẫn rất gần gũi với thiên nhiên, hoàn hảo cho món quà tặng đối tác của chúng tôi.",
           author: "Linh Nguyễn",
-          role: "Boutique partner"
+          role: "Đối tác cửa hàng"
         },
         {
           quote: "Tôi đã tìm thấy những món quà lưu niệm thực sự ý nghĩa tại đây. Không chỉ là một món đồ, đó là một câu chuyện về sự bền vững của Việt Nam.",
           author: "James Wilson",
-          role: "Conscious traveler"
+          role: "Du khách có ý thức"
         }
       ]
     }
@@ -183,17 +183,17 @@ export const vi = {
       materials: {
         title: "Vật liệu (Materials)",
         desc: "RE:BA tái sinh sợi chuối từ phế phẩm nông nghiệp thành vật liệu sinh học cao cấp. Mỗi sợi tơ là một lời cam kết về sự bền vững và thẩm mỹ tự nhiên.",
-        tag: "Regenerative Design"
+        tag: "Thiết kế tái sinh"
       },
       people: {
         title: "Con người (People)",
         desc: "Chúng tôi kết nối những nghệ nhân thủ công và cộng đồng địa phương, tạo ra sinh kế bền vững và tôn vinh đôi bàn tay khéo léo của người Việt.",
-        tag: "Community Empowerment"
+        tag: "Trao quyền cho cộng đồng"
       },
       community: {
         title: "Cộng đồng (Community)",
         desc: "RE:BA xây dựng hệ sinh thái du lịch có trách nhiệm và trải nghiệm bền vững, lan tỏa thông điệp sống xanh và ý thức bảo vệ môi trường đến mọi người.",
-        tag: "Circular Economy"
+        tag: "Kinh tế tuần hoàn"
       }
     }
   },
@@ -616,19 +616,19 @@ export const vi = {
       description: "Với cốt lõi là sợi chuối và kỹ thuật thủ công, RE:BA linh hoạt đáp ứng nhu cầu của nhiều mô hình kinh doanh khác nhau, từ thương mại đến trải nghiệm văn hóa.",
       items: [
         {
-          title: "B2B Buyers & Retailers",
+          title: "Khách hàng B2B & Nhà bán lẻ",
           description: "Các nhà bán lẻ, concept store tìm kiếm sản phẩm thủ công sinh thái, có câu chuyện thương hiệu rõ ràng và thiết kế đương đại."
         },
         {
-          title: "Corporate Gifting",
+          title: "Quà tặng doanh nghiệp",
           description: "Doanh nghiệp cần giải pháp quà tặng đối tác, nhân viên mang thông điệp phát triển bền vững (ESG) và đậm đà bản sắc Việt."
         },
         {
-          title: "Hospitality & Resorts",
+          title: "Khách sạn & Khu nghỉ dưỡng",
           description: "Khách sạn boutique, khu nghỉ dưỡng sinh thái cần vật dụng amenities, decor thân thiện môi trường, tạo điểm nhấn văn hóa cho không gian."
         },
         {
-          title: "Sustainable Designers",
+          title: "Nhà thiết kế bền vững",
           description: "Các nhà thiết kế nội thất, thời trang, bao bì muốn ứng dụng vật liệu sợi chuối mới lạ, tự nhiên vào dự án sáng tạo của mình."
         }
       ]
@@ -711,14 +711,14 @@ export const vi = {
       description: "Khám phá cách vật liệu sợi chuối của RE:BA được ứng dụng sáng tạo trong các dự án thực tế.",
       cases: [
         {
-          title: "Eco-Resort Amenities",
+          title: "Đồ dùng tiện ích khu nghỉ dưỡng sinh thái",
           description: "Bộ khay đựng đồ dùng phòng tắm và dép đi trong nhà dệt từ sợi chuối, mang lại cảm giác mộc mạc, sang trọng cho một khu nghỉ dưỡng 5 sao tại Hội An.",
-          category: "Hospitality"
+          category: "Dịch vụ lưu trú"
         },
         {
-          title: "Year-end Corporate Gift",
+          title: "Quà tặng doanh nghiệp cuối năm",
           description: "Hộp quà Tết doanh nghiệp với sổ tay bìa giấy chuối và lót ly dệt thủ công, truyền tải thông điệp tri ân thân thiện với môi trường.",
-          category: "Corporate Gifting"
+          category: "Quà tặng doanh nghiệp"
         }
       ]
     },
@@ -734,9 +734,9 @@ export const vi = {
         partnershipType: "Lĩnh vực quan tâm",
         selectPlaceholder: "Chọn lĩnh vực quan tâm",
         types: [
-          "Mua sỉ (Wholesale)",
-          "Quà tặng doanh nghiệp (Corporate Gifting)",
-          "Sản phẩm Hospitality",
+          "Mua sỉ",
+          "Quà tặng doanh nghiệp",
+          "Sản phẩm dịch vụ lưu trú",
           "Cung cấp vật liệu",
           "Khác"
         ],

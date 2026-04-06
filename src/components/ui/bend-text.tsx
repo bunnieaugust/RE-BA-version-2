@@ -22,12 +22,13 @@ export function BendText() {
         const isDark = theme === 'dark';
 
         const scene = new THREE.Scene();
-        const camera = new THREE.OrthographicCamera(-10, 10, 10, -10, 0.1, 1000);
-        camera.position.set(5, 5, 5);
+        
+        // [FIX QUAN TRỌNG 1]: Đổi tỷ lệ camera và đặt camera nhìn thẳng mặt (z=5, x=0, y=0) thay vì nghiêng góc
+        const camera = new THREE.OrthographicCamera(-12, 12, 6, -6, 0.1, 1000);
+        camera.position.set(0, 0, 5); 
         camera.lookAt(0, 0, 0);
 
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
-        
         const rect = containerRef.current.getBoundingClientRect();
         renderer.setSize(rect.width, rect.height);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -37,7 +38,9 @@ export function BendText() {
         const createTextTexture = (text: string, blur = false) => {
             const canvas = document.createElement('canvas');
             const ctx = canvas.getContext('2d')!;
-            canvas.width = 1024;
+            
+            // [FIX QUAN TRỌNG 2]: Chuyển canvas thành hình chữ nhật (2:1) để chứa chữ dài
+            canvas.width = 2048;
             canvas.height = 1024;
             ctx.imageSmoothingEnabled = true;
             ctx.imageSmoothingQuality = 'high';
@@ -47,17 +50,19 @@ export function BendText() {
             const textColor = isDark ? '#ffffff' : '#1F2937';
             const shadowColor = isDark ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.15)';
 
+            // [FIX QUAN TRỌNG 3]: Tăng size chữ từ 160px lên 280px để to rõ hơn
             if (blur) {
                 ctx.fillStyle = shadowColor;
                 ctx.filter = 'blur(15px)';
-                ctx.font = 'bold 160px "Playfair Display", serif'; 
+                ctx.font = 'bold 280px "Playfair Display", serif'; 
             } else {
                 ctx.fillStyle = textColor;
-                ctx.font = 'bold 160px "Playfair Display", serif';
+                ctx.font = 'bold 280px "Playfair Display", serif';
             }
-            ctx.textAlign = 'center';
+            // Canh lề trái để chữ đi sát vào viền màn hình bên trái
+            ctx.textAlign = 'left';
             ctx.textBaseline = 'middle';
-            ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+            ctx.fillText(text, 50, canvas.height / 2);
 
             const texture = new THREE.CanvasTexture(canvas);
             texture.generateMipmaps = false;
@@ -80,7 +85,8 @@ export function BendText() {
               vUv = uv; vec3 newPosition = position;
               vec4 worldPosition = modelMatrix * vec4(position, 1.0);
               float dist = length(uDisplacement - worldPosition.xyz);
-              if (dist < 2.5) { newPosition.z += easeInOutCubic(map(dist, 0.0, 2.5, 1.0, 0.0)) * 1.5; }
+              // Cường độ nảy 3D mượt mà
+              if (dist < 3.0) { newPosition.z += easeInOutCubic(map(dist, 0.0, 3.0, 1.0, 0.0)) * 1.8; }
               gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
             }
             `,
@@ -100,20 +106,21 @@ export function BendText() {
             float easeOutQuad(float x) { return 1.0 - (1.0 - x) * (1.0 - x); }
             void main() {
               vec4 color = texture2D(uTexture, vUv);
-              if (dist < 2.5) { color.a = easeOutQuad(map(dist, 0.0, 2.5, 1.0, 0.0)) * color.a * 0.8; } else { color.a = 0.0; }
+              if (dist < 3.0) { color.a = easeOutQuad(map(dist, 0.0, 3.0, 1.0, 0.0)) * color.a * 0.8; } else { color.a = 0.0; }
               gl_FragColor = color;
             }
             `,
             transparent: true, depthWrite: false, side: THREE.DoubleSide
         });
 
-        const geometry = new THREE.PlaneGeometry(15, 15, 150, 150);
+        // [FIX QUAN TRỌNG 4]: Đổi tỷ lệ mặt phẳng thành hình chữ nhật (24x12) khớp với Canvas
+        const geometry = new THREE.PlaneGeometry(24, 12, 150, 75); 
         const textMesh = new THREE.Mesh(geometry, shaderMaterial);
         const shadowMesh = new THREE.Mesh(geometry, shadowMaterial);
-        shadowMesh.position.z = -0.05;
+        shadowMesh.position.z = -0.1;
         scene.add(textMesh); scene.add(shadowMesh);
 
-        const hitPlane = new THREE.Mesh(new THREE.PlaneGeometry(20, 20), new THREE.MeshBasicMaterial({ transparent: true, opacity: 0 }));
+        const hitPlane = new THREE.Mesh(new THREE.PlaneGeometry(30, 20), new THREE.MeshBasicMaterial({ transparent: true, opacity: 0 }));
         scene.add(hitPlane);
 
         const raycaster = new THREE.Raycaster();
@@ -150,7 +157,9 @@ export function BendText() {
             if (!containerRef.current) return;
             const rect = containerRef.current.getBoundingClientRect();
             const aspect = rect.width / rect.height;
-            camera.left = -10 * aspect; camera.right = 10 * aspect;
+            // Cập nhật lại camera khi resize để giữ đúng tỷ lệ thẳng
+            camera.left = -12 * aspect; 
+            camera.right = 12 * aspect;
             camera.updateProjectionMatrix();
             renderer.setSize(rect.width, rect.height);
         };
@@ -168,8 +177,8 @@ export function BendText() {
 
     if (!mounted) return null;
     return (
-        <div className="w-full relative min-h-[150px] md:min-h-[250px] flex items-center justify-start">
-            <div ref={containerRef} className="w-full h-full absolute inset-0 cursor-default" />
+        <div className="w-full relative h-full flex items-center justify-start cursor-default">
+            <div ref={containerRef} className="w-full h-full absolute inset-0" />
         </div>
     );
 }
