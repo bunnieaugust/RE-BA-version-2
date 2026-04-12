@@ -28,7 +28,7 @@ const TextRevealByWord: FC<TextRevealByWordProps> = ({ text, className }) => {
             <div className={"sticky top-0 mx-auto flex h-full w-full items-center bg-transparent"}>
                 
                 {/* ĐÃ XÓA bỏ thuộc tính ref={targetRef} bị dư thừa ở thẻ <p> này */}
-                <p className={"flex flex-wrap text-lg md:text-xl font-medium leading-loose tracking-wide text-foreground/30"}>
+                <p className={"flex flex-wrap text-lg md:text-xl font-sans leading-loose tracking-wide text-foreground/30"}>
                     {words.map((word, i) => {
                         const start = i / words.length;
                         const end = start + 1 / words.length;

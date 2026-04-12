@@ -8,7 +8,9 @@ import { Products } from './pages/Products';
 import { Impact } from './pages/Impact';
 import { Contact } from './pages/Contact';
 import { Partnership } from './pages/Partnership';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { LoadingScreen } from './components/ui/loading-screen';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -37,14 +39,30 @@ function AnimatedRoutes() {
 }
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <ThemeProvider>
       <LanguageProvider>
         <Router>
           <ScrollToTop />
-          <Layout>
-            <AnimatedRoutes />
-          </Layout>
+          <AnimatePresence mode="wait">
+            {isLoading ? (
+              <LoadingScreen key="loading" onComplete={() => setIsLoading(false)} />
+            ) : (
+              <motion.div
+                key="content"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                className="w-full min-h-screen"
+              >
+                <Layout>
+                  <AnimatedRoutes />
+                </Layout>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </Router>
       </LanguageProvider>
     </ThemeProvider>

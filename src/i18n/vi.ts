@@ -564,7 +564,7 @@ export const vi = {
         "Liên hệ chung"
       ],
       submit: "Gửi yêu cầu",
-      success: "Cảm ơn bạn đã kết nối cùng RE:BA. Chúng tôi đã nhận được yêu cầu và sẽ phản hồi sớm.",
+      success: "Cảm ơn bạn đã kết nối cùng RE:BA. Chúng tôi đã nhận được yêu cầu và sẽ liên hệ lại với bạn trong vòng 24-48 giờ tới.",
       successTitle: "Thành công!",
       reset: "Gửi tin nhắn khác",
       placeholders: {
@@ -744,7 +744,7 @@ export const vi = {
         submit: "Gửi yêu cầu hợp tác",
         submitAnother: "Gửi yêu cầu khác",
         successTitle: "Đã gửi yêu cầu",
-        successMessage: "Cảm ơn bạn đã quan tâm đến việc hợp tác cùng RE:BA. Chúng tôi sẽ sớm liên hệ lại."
+        successMessage: "Cảm ơn bạn đã quan tâm đến việc hợp tác cùng RE:BA. Đội ngũ của chúng tôi sẽ liên hệ lại với bạn trong vòng 24-48 giờ tới để trao đổi chi tiết."
       }
     },
     faq: {

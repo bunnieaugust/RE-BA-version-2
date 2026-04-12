@@ -531,7 +531,7 @@ export const en = {
         "General Contact"
       ],
       submit: "Send Inquiry",
-      success: "Thank you for connecting with RE:BA. We have received your request and will respond soon.",
+      success: "Thank you for connecting with RE:BA. We have received your request and will contact you within 24-48 hours.",
       successTitle: "Success!",
       reset: "Send another message",
       placeholders: {
@@ -711,7 +711,7 @@ export const en = {
         submit: "Submit Partnership Request",
         submitAnother: "Submit another request",
         successTitle: "Request Sent",
-        successMessage: "Thank you for your interest in partnering with RE:BA. We will contact you shortly."
+        successMessage: "Thank you for your interest in partnering with RE:BA. Our team will contact you within 24-48 hours to discuss further details."
       }
     },
     faq: {
