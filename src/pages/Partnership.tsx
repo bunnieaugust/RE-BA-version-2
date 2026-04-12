@@ -550,6 +550,8 @@ function InquiryForm({ formRef }: { formRef: React.RefObject<HTMLDivElement> }) 
                     </label>
                     <input 
                       type="tel" 
+                      pattern="^(0|\+84)[35789][0-9]{8}$"
+                      title="Vui lòng nhập số điện thoại hợp lệ (VD: 0345457651)"
                       className="w-full px-6 py-4 rounded-[20px] bg-brand-sand/20 dark:bg-white/5 border border-brand-charcoal/10 dark:border-white/10 text-brand-charcoal dark:text-white focus:outline-none focus:border-brand-olive dark:focus:border-brand-yellow focus:ring-1 focus:ring-brand-olive dark:focus:ring-brand-yellow transition-all"
                     />
                   </div>

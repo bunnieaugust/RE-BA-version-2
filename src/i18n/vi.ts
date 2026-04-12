@@ -303,7 +303,7 @@ export const vi = {
     info: {
       address: "Đà Nẵng / Hội An, Việt Nam",
       email: "rebadanangvn@gmail.com",
-      phone: "0932588883"
+      phone: "0345457651"
     },
     faq: {
       title: "Câu hỏi thường gặp",
@@ -582,7 +582,7 @@ export const vi = {
       description: "Đặt trong bối cảnh Đà Nẵng – Hội An, RE:BA phát triển như một thương hiệu vật liệu và trải nghiệm gắn với bản sắc địa phương, tính bền vững và những khả năng hợp tác dài hạn.",
       items: [
         { title: "Email", value: "rebadanangvn@gmail.com", link: "mailto:rebadanangvn@gmail.com" },
-        { title: "Điện thoại", value: "0932588883", link: "tel:0932588883" },
+        { title: "Điện thoại", value: "0345457651", link: "tel:0345457651" },
         { title: "Địa điểm", value: "Đà Nẵng / Hội An, Việt Nam" },
         { title: "Mạng xã hội", value: "Facebook", link: "https://www.facebook.com/people/REBA-%C4%90%C3%80-N%E1%BA%B4NG/61566026556415" }
       ],

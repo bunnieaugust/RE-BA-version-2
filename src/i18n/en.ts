@@ -299,7 +299,7 @@ export const en = {
     info: {
       address: "Da Nang / Hoi An, Vietnam",
       email: "rebadanangvn@gmail.com",
-      phone: "0932588883"
+      phone: "0345457651"
     },
     faq: {
       title: "Frequently Asked Questions",
@@ -549,7 +549,7 @@ export const en = {
       description: "Set in the context of Da Nang – Hoi An, RE:BA develops as a material and experience brand rooted in local identity, sustainability, and long-term collaboration potential.",
       items: [
         { title: "Email", value: "rebadanangvn@gmail.com", link: "mailto:rebadanangvn@gmail.com" },
-        { title: "Phone", value: "0932588883", link: "tel:0932588883" },
+        { title: "Phone", value: "0345457651", link: "tel:0345457651" },
         { title: "Location", value: "Da Nang / Hoi An, Vietnam" },
         { title: "Social", value: "Facebook", link: "https://www.facebook.com/people/REBA-%C4%90%C3%80-N%E1%BA%B4NG/61566026556415" }
       ],
