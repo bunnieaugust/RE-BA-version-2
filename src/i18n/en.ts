@@ -548,10 +548,10 @@ export const en = {
       headline: "RE:BA is present where materials, craft, and tourism meet",
       description: "Set in the context of Da Nang – Hoi An, RE:BA develops as a material and experience brand rooted in local identity, sustainability, and long-term collaboration potential.",
       items: [
-        { title: "Email", value: "hello@reba.vn" },
-        { title: "Phone", value: "+84 xxx xxx xxx" },
+        { title: "Email", value: "rebadanangvn@gmail.com", link: "mailto:rebadanangvn@gmail.com" },
+        { title: "Phone", value: "0932588883", link: "tel:0932588883" },
         { title: "Location", value: "Da Nang / Hoi An, Vietnam" },
-        { title: "Social", value: "Instagram / Facebook / TikTok" }
+        { title: "Social", value: "Facebook", link: "https://www.facebook.com/people/REBA-%C4%90%C3%80-N%E1%BA%B4NG/61566026556415" }
       ],
       note: "Available for product inquiries, hospitality partnerships, custom projects."
     },

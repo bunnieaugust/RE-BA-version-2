@@ -581,10 +581,10 @@ export const vi = {
       headline: "RE:BA hiện diện tại bối cảnh nơi vật liệu, thủ công và du lịch gặp nhau",
       description: "Đặt trong bối cảnh Đà Nẵng – Hội An, RE:BA phát triển như một thương hiệu vật liệu và trải nghiệm gắn với bản sắc địa phương, tính bền vững và những khả năng hợp tác dài hạn.",
       items: [
-        { title: "Email", value: "hello@reba.vn" },
-        { title: "Điện thoại", value: "+84 xxx xxx xxx" },
+        { title: "Email", value: "rebadanangvn@gmail.com", link: "mailto:rebadanangvn@gmail.com" },
+        { title: "Điện thoại", value: "0932588883", link: "tel:0932588883" },
         { title: "Địa điểm", value: "Đà Nẵng / Hội An, Việt Nam" },
-        { title: "Mạng xã hội", value: "Instagram / Facebook / TikTok" }
+        { title: "Mạng xã hội", value: "Facebook", link: "https://www.facebook.com/people/REBA-%C4%90%C3%80-N%E1%BA%B4NG/61566026556415" }
       ],
       note: "Sẵn sàng cho các yêu cầu về sản phẩm, hợp tác hospitality, dự án tùy chỉnh."
     },

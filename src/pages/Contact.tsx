@@ -430,7 +430,13 @@ export function Contact() {
                       {infoIcons[i]}
                     </div>
                     <h4 className="text-xs font-bold uppercase tracking-widest text-brand-charcoal/40 dark:text-white/40 mb-1">{item.title}</h4>
-                    <p className="text-brand-charcoal dark:text-white font-medium">{item.value}</p>
+                    {item.link ? (
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-brand-charcoal dark:text-white font-medium hover:text-brand-olive dark:hover:text-brand-yellow transition-colors">
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-brand-charcoal dark:text-white font-medium">{item.value}</p>
+                    )}
                   </motion.div>
                 ))}
               </div>

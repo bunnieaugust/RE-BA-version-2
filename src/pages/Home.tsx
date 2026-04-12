@@ -284,7 +284,7 @@ export function Home() {
               description="Sợi được xử lý làm sạch hoàn toàn, loại bỏ phần thịt và tạp chất, mang lại độ mềm và tính đồng đều cao, phù hợp cho các ứng dụng thủ công và dệt cơ bản."
               features={["Sợi mềm, sạch, dễ xử lý", "Đã loại bỏ tạp chất và phần keo tự nhiên", "Ứng dụng: dệt thủ công, decor, nguyên liệu sản xuất"]}
               weight="Khối lượng: 1kg – 20kg"
-              imageUrl="https://i.pinimg.com/1200x/6c/33/b3/6c33b34f09db802f78780313580d7ed5.jpg"
+              imageUrl="https://iili.io/BX4Y2El.jpg"
               imageAlt="Sợi chuối thô"
               priceText="Liên hệ"
               onBookNow={() => {}}
@@ -294,7 +294,7 @@ export function Home() {
               description="Sợi chuối được xe thành dạng dây, tăng độ bền và khả năng ứng dụng trong sản xuất các sản phẩm thủ công và nội thất."
               features={["Chiều dài ~450m/cuộn", "Đường kính sợi ~1mm", "Độ bền cao, dễ sử dụng"]}
               weight="Khối lượng: 1kg/cuộn"
-              imageUrl="https://i.pinimg.com/1200x/42/04/a1/4204a113f75458c9944011fa93f999c7.jpg"
+              imageUrl="https://iili.io/BX4cDYB.jpg"
               imageAlt="Sợi chuối se"
               priceText="Liên hệ"
               onBookNow={() => {}}
@@ -304,7 +304,7 @@ export function Home() {
               description="Sợi được bện nhiều lớp, tạo kết cấu chắc chắn, phù hợp cho các sản phẩm yêu cầu độ bền và tính thẩm mỹ cao."
               features={["Chiều dài ~450m/cuộn", "Kết cấu bền chắc", "Phù hợp nội thất và sản phẩm cao cấp"]}
               weight="Khối lượng: 1kg/cuộn"
-              imageUrl="https://i.pinimg.com/1200x/35/c9/13/35c9137e20754967c1d2ba18af5a4693.jpg"
+              imageUrl="https://iili.io/BX4a0H7.jpg"
               imageAlt="Sợi chuối bện"
               priceText="Liên hệ"
               onBookNow={() => {}}

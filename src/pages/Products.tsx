@@ -16,7 +16,7 @@ export function Products() {
     {
       title: "Sợi chuối thô",
       description: "Sợi được xử lý làm sạch hoàn toàn, loại bỏ phần thịt và tạp chất, mang lại độ mềm và tính đồng đều cao, phù hợp cho các ứng dụng thủ công và dệt cơ bản.",
-      image: "https://musapacta.com.vn/wp-content/uploads/2022/05/z3238337825345_0796dbc46c32aa10df86e5cfdb2ae6d3.jpg",
+      image: "https://iili.io/BX4Y2El.jpg",
       tags: ["Sợi mềm, sạch, dễ xử lý", "Đã loại bỏ tạp chất và phần keo tự nhiên", "Ứng dụng: dệt thủ công, decor, nguyên liệu sản xuất"],
       badge: "Khối lượng: 1kg - 20kg",
       price: "Liên hệ"
@@ -24,7 +24,7 @@ export function Products() {
     {
       title: "Sợi chuối se",
       description: "Sợi chuối được xe thành dạng dây, tăng độ bền và khả năng ứng dụng trong sản xuất các sản phẩm thủ công và nội thất.",
-      image: "https://i.pinimg.com/1200x/35/c9/13/35c9137e20754967c1d2ba18af5a4693.jpg",
+      image: "https://iili.io/BX4cDYB.jpg",
       tags: ["Chiều dài ~450m/cuộn", "Đường kính sợi ~1mm", "Độ bền cao, dễ sử dụng"],
       badge: "Khối lượng: 1kg/cuộn",
       price: "Liên hệ"
@@ -32,7 +32,7 @@ export function Products() {
     {
       title: "Sợi chuối bện",
       description: "Sợi được bện nhiều lớp, tạo kết cấu chắc chắn, phù hợp cho các sản phẩm yêu cầu độ bền và tính thẩm mỹ cao.",
-      image: "https://i.pinimg.com/1200x/42/04/a1/4204a113f75458c9944011fa93f999c7.jpg",
+      image: "https://iili.io/BX4a0H7.jpg",
       tags: ["Chiều dài ~450m/cuộn", "Kết cấu bền chắc", "Phù hợp nội thất và sản phẩm cao cấp"],
       badge: "Khối lượng: 1kg/cuộn",
       price: "Liên hệ"
