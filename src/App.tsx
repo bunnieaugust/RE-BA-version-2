@@ -11,6 +11,7 @@ import { Partnership } from './pages/Partnership';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { LoadingScreen } from './components/ui/loading-screen';
+import { ChatWidget } from './components/ui/chat-widget';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -60,6 +61,7 @@ export default function App() {
                 <Layout>
                   <AnimatedRoutes />
                 </Layout>
+                <ChatWidget />
               </motion.div>
             )}
           </AnimatePresence>
