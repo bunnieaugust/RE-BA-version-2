@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RE:BA | Dệt Xanh - Sống Bền</title>
     <meta name="description" content="RE:BA biến thân chuối sau thu hoạch thành vật liệu sinh học và sản phẩm thủ công bền vững." />
+    <script>
+      (function() {
+        var f = window.fetch;
+        if (f) {
+          try {
+            Object.defineProperty(window, 'fetch', {
+              configurable: true,
+              enumerable: true,
+              get: function() { return f; },
+              set: function(v) { f = v; }
+            });
+          } catch (e) {}
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

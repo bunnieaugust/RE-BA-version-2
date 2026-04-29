@@ -165,7 +165,7 @@ export function Contact() {
             </motion.p>
           </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 max-w-7xl mx-auto">
             {t.contactPage.options.items.map((item: any, i: number) => {
               const imageUrls = [
                 "https://i.pinimg.com/736x/e8/a4/5e/e8a45e7d6c95d844078c556387323f3a.jpg",
@@ -184,7 +184,7 @@ export function Contact() {
               >
                 <DirectionAwareHover 
                   imageUrl={imageUrls[i % imageUrls.length]}
-                  className="w-full h-[300px] md:h-[380px] rounded-[24px]"
+                  className="w-full h-[320px] md:h-[420px] rounded-[32px] shadow-sm group-hover:shadow-2xl transition-all duration-500"
                 >
                   <div className="flex flex-col items-start text-left">
                     <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-white mb-3 border border-white/20 group-hover:bg-brand-yellow group-hover:text-brand-charcoal transition-all duration-300 group-hover:scale-110">

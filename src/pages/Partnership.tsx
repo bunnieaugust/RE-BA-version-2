@@ -217,7 +217,7 @@ function WhoIsThisFor() {
           </motion.p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {t.partnership.whoIsThisFor.items.map((item: any, i: number) => (
             <motion.div 
               key={i}
@@ -226,7 +226,7 @@ function WhoIsThisFor() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <GlowCard customSize className="h-full rounded-[32px] p-10 bg-white dark:bg-brand-charcoal/20 border border-brand-charcoal/5 dark:border-white/5 group flex flex-col justify-between hover:shadow-xl transition-all duration-500">
+              <GlowCard customSize className="h-full rounded-[40px] p-10 md:p-12 bg-white dark:bg-brand-charcoal/20 border border-brand-charcoal/5 dark:border-white/5 group flex flex-col justify-between hover:shadow-2xl transition-all duration-500">
                 <div className="w-14 h-14 rounded-2xl bg-brand-sand dark:bg-white/10 flex items-center justify-center mb-8 text-brand-olive dark:text-brand-yellow group-hover:scale-110 group-hover:bg-brand-olive dark:group-hover:bg-brand-yellow group-hover:text-white dark:group-hover:text-brand-charcoal transition-all duration-500 shadow-sm">
                   {icons[i]}
                 </div>

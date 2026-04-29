@@ -75,7 +75,12 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-lg mb-6 text-white">{t.footer.connect}</h4>
             <div className="flex items-center gap-4 mb-8">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-sand hover:bg-brand-yellow hover:text-brand-charcoal transition-all duration-300">
+              <a 
+                href="https://www.facebook.com/people/REBA-%C4%90%C3%80-N%E1%BA%B4NG/61566026556415" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-sand hover:bg-brand-yellow hover:text-brand-charcoal transition-all duration-300"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-sand hover:bg-brand-yellow hover:text-brand-charcoal transition-all duration-300">

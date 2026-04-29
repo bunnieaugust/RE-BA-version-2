@@ -54,6 +54,36 @@ export const vi = {
           desc: "Cam kết rõ ràng về nguồn gốc, quy trình xử lý và chất lượng sản phẩm."
         }
       ]
+    },
+    team: {
+      title: "ĐỘI NGŨ SÁNG LẬP",
+      description: "Những con người tâm huyết đứng sau hành trình tái sinh sợi chuối của RE:BA.",
+      members: [
+        {
+          name: "Yến",
+          role: "CEO & Co-founder",
+          image: "https://iili.io/BiO5dAl.jpg",
+          bio: "Tầm nhìn chiến lược và dẫn dắt RE:BA trên hành trình phát triển bền vững."
+        },
+        {
+          name: "Thảo",
+          role: "Creative Director & Co-founder",
+          image: "https://iili.io/BiO5vR4.jpg",
+          bio: "Kiến tạo ngôn ngữ thiết kế và thổi hồn nghệ thuật vào từng thớ sợi chuối."
+        },
+        {
+          name: "Tú",
+          role: "COO & Co-founder",
+          image: "https://iili.io/BiO1M21.md.jpg",
+          bio: "Quản lý vận hành và đảm bảo quy trình sản xuất tối ưu, minh bạch."
+        },
+        {
+          name: "Oanh",
+          role: "CMO & Co-founder",
+          image: "https://iili.io/BiOsI6l.jpg",
+          bio: "Kết nối giá trị vật liệu với cộng đồng và lan tỏa thông điệp sống bền vững."
+        }
+      ]
     }
   },
   features: {

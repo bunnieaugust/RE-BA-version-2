@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
+export const LoadingScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {

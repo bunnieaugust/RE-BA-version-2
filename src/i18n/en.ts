@@ -32,10 +32,58 @@ export const en = {
       "Connecting local craft and social impact"
     ],
     quote: "From agricultural waste to sustainable living value.",
-    mission: "Mission",
-    missionText: "To reduce agricultural waste and create sustainable livelihoods through the innovation of biomaterials.",
     vision: "Vision",
-    visionText: "To become Vietnam's pioneering brand in banana fiber materials and circular design.",
+    visionText: "To become a reputable supplier of standardized banana fiber, contributing to the development of a biomaterial ecosystem for sustainable handicrafts and textiles. RE:BA aims to connect agricultural by-products with production enterprises, making banana fiber a high-value material in the sustainable supply chain.",
+    mission: "Mission",
+    missionText: "To provide processed and standardized banana fiber, while developing sustainable material applications in handicrafts and textiles.\nFor partners: Provide stable, eco-friendly raw material sources, support businesses in accessing biomaterials and reduce dependence on traditional materials.\nFor the environment: Reuse agricultural by-products, reduce biological waste and promote a circular economy.",
+    coreValues: {
+      title: "CORE VALUES",
+      subtitle: "Sustainable – Core Material – Transparent",
+      values: [
+        {
+          title: "Sustainable",
+          desc: "Utilizing agricultural by-products, reducing environmental impact."
+        },
+        {
+          title: "Core Material",
+          desc: "Developing banana fiber as a foundational biomaterial, ensuring stability and applicability."
+        },
+        {
+          title: "Transparent",
+          desc: "Clear commitment to origin, processing procedures and product quality."
+        }
+      ]
+    },
+    team: {
+      title: "FOUNDING TEAM",
+      description: "The passionate individuals behind RE:BA's banana fiber regeneration journey.",
+      members: [
+        {
+          name: "Yến",
+          role: "CEO & Co-founder",
+          image: "https://iili.io/BiO5dAl.jpg",
+          bio: "Strategic vision and leading RE:BA on a sustainable development journey."
+        },
+        {
+          name: "Thảo",
+          role: "Creative Director & Co-founder",
+          image: "https://iili.io/BiO5vR4.jpg",
+          bio: "Creating design language and infusing art into every banana fiber strip."
+        },
+        {
+          name: "Tú",
+          role: "COO & Co-founder",
+          image: "https://iili.io/BiO1M21.md.jpg",
+          bio: "Managing operations and ensuring optimal, transparent production processes."
+        },
+        {
+          name: "Oanh",
+          role: "CMO & Co-founder",
+          image: "https://iili.io/BiOsI6l.jpg",
+          bio: "Connecting material value with the community and spreading the message of sustainable living."
+        }
+      ]
+    }
   },
   features: {
     title: "Why RE:BA?",
